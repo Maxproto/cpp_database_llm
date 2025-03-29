@@ -1,6 +1,6 @@
 # CPP Database + LLM Interface
 
-This is a sample C++ project demonstrating how to integrate a SQLite database with the OpenAI (ChatGPT) API using [cpr](https://github.com/libcpr/cpr) and [nlohmann/json](https://github.com/nlohmann/json)
+This is a SQLite database with the OpenAI (ChatGPT) API using [cpr](https://github.com/libcpr/cpr) and [nlohmann/json](https://github.com/nlohmann/json)
 
 ## Requirements
 
