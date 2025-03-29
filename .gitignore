@@ -1,0 +1,18 @@
+# Ignore build folder
+/build/
+CMakeFiles/
+CMakeCache.txt
+
+# Executables
+*.exe
+*.out
+*.o
+
+# macOS
+.DS_Store
+
+# Local API key
+openai_api_key.txt
+
+# Other
+chat_history.db
