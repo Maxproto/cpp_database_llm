@@ -16,21 +16,15 @@
  #include "database.h"
  #include "llm.h"
  
- static std::string readAPIKeyFromFile() {
-    std::ifstream ifs;
-
-    // Try current directory
-    ifs.open("openai_api_key.txt");
+ static std::string readAPIKeyFromFile(const std::string& filepath) {
+    std::ifstream ifs(filepath);
     if (!ifs.is_open()) {
-        // Try parent directory (project root)
-        ifs.open("../openai_api_key.txt");
+                ifs.open("../openai_api_key.txt");
     }
-
     if (!ifs.is_open()) {
-        std::cerr << "Could not find openai_api_key.txt in current or parent directory.\n";
+        std::cerr << "Could not open file: " << filepath << std::endl;
         return "";
     }
-
     std::string key;
     std::getline(ifs, key);
     ifs.close();
